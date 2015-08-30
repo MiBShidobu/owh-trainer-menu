@@ -1,6 +1,13 @@
 ## Description: ##
 Hook into the 'Speak with Fairy Iris' skill to create a full simple trainer menu, incase you want to have fun!
 
+## Media: ##
+![complete_one.png](https://github.com/mibshidobu/owh-trainer-menu/raw/master/src/media/complete_one.png "Menu Media One")
+![complete_two.png](https://github.com/mibshidobu/owh-trainer-menu/raw/master/src/media/complete_two.png "Menu Media Two")
+![complete_three.png](https://github.com/mibshidobu/owh-trainer-menu/raw/master/src/media/complete_three.png "Menu Media Three")
+![complete_four.png](https://github.com/mibshidobu/owh-trainer-menu/raw/master/src/media/complete_four.png "Menu Media Four")
+![complete_five.png](https://github.com/mibshidobu/owh-trainer-menu/raw/master/src/media/complete_five.png "Menu Media Five")
+
 ## Installation: ##
 It may look complicated, but it's all really simple... trust me.
 * Click the 'Download ZIP' button.
