@@ -1,0 +1,56 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@@@if tmp1 != -1
+@putselect Give_\c[1]x1 1
+@putselect Give_\c[1]x2 2
+@putselect Give_\c[1]x5 3
+@putselect Give_\c[1]x10 4
+@putselect Give_\c[1]x25 5
+@putselect \i[815]_Exit____________\E\f[12]\c[3]$str\c[0] 0
+@select NC inputlist
+
+# =============================================================================
+# >> EFFECT CHECK
+# =============================================================================
+@@@@if select != 0
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@se [ItemGet]Pickup_Money.ogg
+
+# =============================================================================
+# >> QUANITY CHECK
+# =============================================================================
+@@@@@if select == 1
+@getitem tmp1 1
+@mes player
+Huh, where did this \c[3]$str\c[0] come from?
+
+@@@@@if select == 2
+@getitem tmp1 2
+@mes player
+Oh cool, a couple of \c[3]$str\c[0] were dropped.
+
+@@@@@if select == 3
+@getitem tmp1 5
+@mes player
+Nice, there was a whole stash of \c[3]$str\c[0] here!
+
+@@@@@if select == 4
+@getitem tmp1 10
+@mes player
+Quite a lot of \c[3]$str\c[0] lying around...
+
+@@@@@if select == 5
+@getitem tmp1 25
+@mes player
+HOW MANY OF THESE \c[3]$str\c[0] WERE THERE!?!
+
+@@@@@ifend
+
+@@@@ifend
+
+@@@ifend

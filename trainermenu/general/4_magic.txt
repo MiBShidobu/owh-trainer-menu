@@ -1,0 +1,44 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect \i[858]_Use_\c[8]Awakening 1
+@putselect \i[859]_\c[8]Teleport_\c[0]Away 2
+@putselect \i[852]_\c[8]Analyze_\c[0]Equipment 3
+@putselect \i[815]_Exit____________\E\f[12]\c[1][Magic] 0
+@select NC inputlist
+
+# =============================================================================
+# >> EFFECT CHECK
+# =============================================================================
+@@if select != 0
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+
+@@ifend
+
+# =============================================================================
+# >> SKILL CHECK
+# =============================================================================
+@@if select == 1
+@useskill 10
+
+@se [Force]Fire_mini.ogg
+@mes player
+YEAHHHHHHH!
+
+@@if select == 2
+@useskill 78
+@wait 5
+
+@mes player
+How did I get here!?
+
+@@if select == 3
+@analyze
+@mes player
+Oh, so that's how it works!
+
+@@ifend

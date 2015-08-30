@@ -1,0 +1,66 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect \i[79]_Speak_with_\c[3]Fairy_Iris 1
+@putselect \i[90]_Actions 2
+@putselect \i[505]_Experience 3
+@putselect \i[463]_Money 4
+@putselect \i[457]_Magic 5
+@putselect \i[500]_Items 6
+@putselect \i[504]_Entities 7
+@putselect \i[815]_Exit____________\E\f[12]\c[1][Trainer_Menu] 0
+@select NC inputlist
+
+# =============================================================================
+# >> SELECTION CHECK
+# =============================================================================
+@if select == 1 # Talk to Fairy
+@loadfile fairy_skilltalk_original
+
+@talkmode OFF
+@wait 2
+@exit
+
+@if select == 2 # Perform General Actions
+@loadfile trainermenu/general/1_actions
+
+@talkmode OFF
+@wait 2
+@exit
+
+@if select == 3 # Get Experience
+@loadfile trainermenu/general/2_experience
+
+@talkmode OFF
+@wait 2
+@exit
+
+@if select == 4 # Get Money
+@loadfile trainermenu/general/3_money
+
+@talkmode OFF
+@wait 2
+@exit
+
+@if select == 5 # Do Magic
+@loadfile trainermenu/general/4_magic
+
+@talkmode OFF
+@wait 2
+@exit
+
+@if select == 6 # Get Items
+@loadfile trainermenu/general/5_items
+
+@talkmode OFF
+@wait 2
+@exit
+
+@if select == 7 # Spawn Entities
+@loadfile trainermenu/general/6_entities
+
+@talkmode OFF
+@wait 2
+@exit
+
+@ifend

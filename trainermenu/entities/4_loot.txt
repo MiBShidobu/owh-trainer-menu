@@ -1,0 +1,29 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect Spawn_\c[3]Box_(Normal) 39
+@putselect Spawn_\c[3]Box_(Gift) 40
+@putselect Spawn_\c[3]Money_Vault 43
+@putselect Spawn_\c[3]Iron_Chest 41
+@putselect Spawn_\c[3]Extravagant_Chest_(Normal) 42
+@putselect Spawn_\c[3]Extravagant_Chest_(Map) 45
+@putselect Spawn_\c[3]Holy_Weapon_Chest 46
+@putselect Spawn_\c[3]Holy_Armor_Chest 47
+@putselect \i[815]_Exit____________________________________\E\f[12]\c[1][Loot] -1
+@select NC inputlist
+
+# =============================================================================
+# >> MENU CHECK
+# =============================================================================
+@@@if select != -1
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@evset select player
+
+@mes player
+Oooo, I wonder what's inside.
+
+@@@ifend

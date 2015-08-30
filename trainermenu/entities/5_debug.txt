@@ -1,0 +1,23 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect Spawn_\c[3]<DEADNAME>'s_Ghost 2
+@putselect Spawn_\c[3]Enchantment_Remover 9
+@putselect \i[815]_Exit________________________\E\f[12]\c[1][Debug] -1
+@select NC inputlist
+
+# =============================================================================
+# >> MENU CHECK
+# =============================================================================
+@@@if select != -1
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@evset select player
+
+@mes player
+What... WHAT ARE YOU!?
+
+@@@ifend

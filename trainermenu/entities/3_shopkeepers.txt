@@ -1,0 +1,30 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect Spawn_\c[3]Appraiser 25
+@putselect Spawn_\c[3]Armor_Dealer 20
+@putselect Spawn_\c[3]Chef 23
+@putselect Spawn_\c[3]Dimensional_Vault_Guard 28
+@putselect Spawn_\c[3]Fortune-teller_Auris 15
+@putselect Spawn_\c[3]Merchant 21
+@putselect Spawn_\c[3]Save_Attendant 34
+@putselect Spawn_\c[3]Traveling_Chef 24
+@putselect Spawn_\c[3]Weapon_Dealer 19
+@putselect \i[815]_Exit____________________________________\E\f[12]\c[1][Shopkeepers] -1
+@select NC inputlist
+
+# =============================================================================
+# >> MENU CHECK
+# =============================================================================
+@@@if select != -1
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@evset select player
+
+@mes player
+Should check out their wares.
+
+@@@ifend

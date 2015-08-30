@@ -1,0 +1,38 @@
+# TODO:
+#	add per weapon type icon
+#	make type menus
+
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect \i[510]_Daggers 1
+@putselect \i[510]_Short_Swords 2
+@putselect \i[510]_Long_Swords 3
+@putselect \i[510]_Spears 4
+@putselect \i[510]_Staves 5
+@putselect \i[510]_Bows 6
+@putselect \i[815]_Exit____________\E\f[12]\c[1][Weapons] 0
+@select NC inputlist
+
+# =============================================================================
+# >> MENU CHECK
+# =============================================================================
+@@if select == 1
+@loadfile trainermenu/weapons/1_daggers
+
+@@if select == 2
+@loadfile trainermenu/weapons/2_short_swords
+
+@@if select == 3
+@loadfile trainermenu/weapons/3_long_swords
+
+@@if select == 4
+@loadfile trainermenu/weapons/4_spears
+
+@@if select == 5
+@loadfile trainermenu/weapons/5_staves
+
+@@if select == 6
+@loadfile trainermenu/weapons/6_bows
+
+@@ifend

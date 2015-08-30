@@ -1,0 +1,33 @@
+@val tmp1 = -1
+
+@putselect \i[535]_Quality_Whetstone 1
+@putselect \i[534]_Scroll_of_Swordplay 2
+@putselect \i[534]_Scroll_of_the_Sword_Saint 3
+@putselect \i[534]_Scroll_of_Armoring 4
+@putselect \i[534]_Scroll_of_the_Phalanx 5
+@putselect \i[815]_Exit____________\E\f[12]\c[1][Enchantments] 0
+@select NC inputlist
+
+@@@if select == 1
+@val tmp1 = 40033
+@setstr \i[535]_Quality_Whetstone
+
+@@@if select == 2
+@val tmp1 = 40021
+@setstr \i[534]_Scroll_of_Swordplay
+
+@@@if select == 3
+@val tmp1 = 40024
+@setstr \i[534]_Scroll_of_the_Sword_Saint
+
+@@@if select == 4
+@val tmp1 = 40022
+@setstr \i[534]_Scroll_of_Armoring
+
+@@@if select == 5
+@val tmp1 = 40025
+@setstr \i[534]_Scroll_of_the_Phalanx
+
+@@@ifend
+
+@loadfile trainermenu/context/items

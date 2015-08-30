@@ -1,0 +1,57 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect \i[571]_+100_Silvers 1
+@putselect \i[561]_+200_Silvers 2
+@putselect \i[566]_+500_Silvers 3
+@putselect \i[576]_+1000_Silvers 4
+@putselect \i[575]_+2500_Silvers 5
+@putselect \i[815]_Exit____________\E\f[12]\c[1][Money] 0
+@select NC inputlist
+
+# =============================================================================
+# >> EFFECT CHECK
+# =============================================================================
+@@if select != 0
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+
+@@ifend
+
+# =============================================================================
+# >> MONEY CHECK
+# =============================================================================
+@@if select == 1
+@money 100
+
+@mes player
+Ou! A penny!
+
+@@if select == 2
+@money 200
+
+@mes player
+This is going towards food!
+
+@@if select == 3
+@money 500
+
+@mes player
+What to buy...
+
+@@if select == 4
+@money 1000
+
+@mes player
+Gettin' pretty rich here...
+
+@@if select == 5
+@money 2500
+
+@mes player
+Time to buy me a mansion!
+
+@@ifend

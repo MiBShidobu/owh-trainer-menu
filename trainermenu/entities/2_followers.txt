@@ -1,0 +1,26 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect Spawn_\c[3]Soldier_D 137
+@putselect Spawn_\c[3]Queen_Frieda 141
+@putselect Spawn_\c[3]Panty_the_Merc 142
+@putselect Spawn_\c[3]King_Victor 143
+@putselect Spawn_\c[3]Dosey 144
+@putselect \i[815]_Exit________________________\E\f[12]\c[1][Followers] -1
+@select NC inputlist
+
+# =============================================================================
+# >> MENU CHECK
+# =============================================================================
+@@@if select != -1
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@evset select player
+
+@mes player
+You shall join my cause!
+
+@@@ifend

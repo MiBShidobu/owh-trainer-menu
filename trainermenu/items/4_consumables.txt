@@ -1,0 +1,38 @@
+@val tmp1 = -1
+
+@putselect \i[541]_Nayuta_Fruit 1
+@putselect \i[502]_Vial_of_Healing 2
+@putselect \i[502]_Vial_of_Stamina 3
+@putselect \i[538]_Tasty_Lunchbox 4
+@putselect \i[534]_Scroll_of_Analysis 5
+@putselect \i[534]_Scroll_of_Repair 6
+@putselect \i[815]_Exit____________\E\f[12]\c[1][Consumables] 0
+@select NC inputlist
+
+@@@if select == 1
+@val tmp1 = 40010
+@setstr \i[541]_Nayuta_Fruit
+
+@@@if select == 2
+@val tmp1 = 40002
+@setstr \i[502]_Vial_of_Healing
+
+@@@if select == 3
+@val tmp1 = 40003
+@setstr \i[502]_Vial_of_Stamina
+
+@@@if select == 4
+@val tmp1 = 40015
+@setstr \i[538]_Tasty_Lunchbox
+
+@@@if select == 5
+@val tmp1 = 40020
+@setstr \i[534]_Scroll_of_Analysis
+
+@@@if select == 6
+@val tmp1 = 40026
+@setstr \i[534]_Scroll_of_Repair
+
+@@@ifend
+
+@loadfile trainermenu/context/items

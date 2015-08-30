@@ -1,0 +1,54 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect \i[510]_Weapons 1
+@putselect \i[74]_Armors 2
+@putselect \i[529]_Accessories 3
+@putselect \i[502]_Consumables 4
+@putselect \i[534]_Enchantments 5
+@putselect \i[815]_Exit____________\E\f[12]\c[1][Items] 0
+@select NC inputlist
+
+# =============================================================================
+# >> MENU CHECK
+# =============================================================================
+@@if select == 1
+@talkmode OFF
+@wait 3
+@flash
+
+@mes player
+Sorry but this isn't finished yet :(
+
+@exit
+@loadfile trainermenu/items/1_weapons
+
+@@if select == 2
+@talkmode OFF
+@wait 3
+@flash
+
+@mes player
+Sorry but this isn't finished yet :(
+
+@exit
+@loadfile trainermenu/items/2_armors
+
+@@if select == 3
+@talkmode OFF
+@wait 3
+@flash
+
+@mes player
+Sorry but this isn't finished yet :(
+
+@exit
+@loadfile trainermenu/items/3_accessories
+
+@@if select == 4
+@loadfile trainermenu/items/4_consumables
+
+@@if select == 5
+@loadfile trainermenu/items/5_enchantments
+
+@@ifend

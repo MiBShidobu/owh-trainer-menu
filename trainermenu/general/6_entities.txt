@@ -1,0 +1,30 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect \i[415]_Dark_Brotherhood 1
+@putselect \i[533]_Followers 2
+@putselect \i[464]_Shopkeepers 3
+@putselect \i[504]_Loot 4
+@putselect \i[547]_Debug 5
+@putselect \i[815]_Exit____________\E\f[12]\c[1][Entities] 0
+@select NC inputlist
+
+# =============================================================================
+# >> MENU CHECK
+# =============================================================================
+@@if select == 1
+@loadfile trainermenu/entities/1_dark_brotherhood
+
+@@if select == 2
+@loadfile trainermenu/entities/2_followers
+
+@@if select == 3
+@loadfile trainermenu/entities/3_shopkeepers
+
+@@if select == 4
+@loadfile trainermenu/entities/4_loot
+
+@@if select == 5
+@loadfile trainermenu/entities/5_debug
+
+@@ifend

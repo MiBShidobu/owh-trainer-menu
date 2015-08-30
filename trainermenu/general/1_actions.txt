@@ -1,0 +1,44 @@
+@putselect \i[86]_\c[2]Heal_\c[0]Character 1
+@putselect \i[76]_\c[3]Repair_\c[0]Equipped 2
+@putselect \i[586]_\c[8]Save_\c[0]Game 3
+@putselect \i[815]_Exit____________\f[12]\c[1][Actions] 0
+@select NC inputlist
+
+@@if select == 1
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@life param_maxlife
+@st param_maxst
+@genki 1500
+
+@mes player
+I feel refreshed!
+
+@@if select == 2
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@repair weapon 99999
+@repair armor 99999
+@repair plus 99999
+
+@se [Effect]GoodEvent.ogg
+@mes player
+Spiffy!
+
+@@if select == 3
+@talkmode OFF
+@wait 4
+
+@flash
+@wait 1
+
+@se [Action]BookPage.ogg
+@save
+
+@@ifend

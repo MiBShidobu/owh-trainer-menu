@@ -1,0 +1,25 @@
+# =============================================================================
+# >> MENU CONSTRUCTION
+# =============================================================================
+@putselect Spawn_\c[3]Dealer 36
+@putselect Spawn_\c[3]Gatekeeper 35
+@putselect Spawn_\c[3]Member 38
+@putselect Spawn_\c[3]Merchant 37
+@putselect \i[815]_Exit________________________\E\f[12]\c[1][Dark_Brotherhood] -1
+@select NC inputlist
+
+# =============================================================================
+# >> MENU CHECK
+# =============================================================================
+@@@if select != -1
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@evset select player
+
+@mes player
+Why are these people so shady looking!?
+
+@@@ifend

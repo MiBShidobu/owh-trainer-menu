@@ -1,0 +1,64 @@
+@putselect \i[803]_+100%_Experience 1
+@putselect \i[802]_+200%_Experience 2
+@putselect \i[804]_+500%_Experience 3
+@putselect \i[811]_+1000%_Experience 4
+@putselect \i[805]_+2500%_Experience 5
+@putselect \i[815]_Exit____________\f[12]\c[1][Experience] 0
+@select NC inputlist
+
+@@if select == 1
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@exp 100
+
+@mes player
+Woah...
+
+@@if select == 2
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@exp 200
+
+@mes player
+That was awesome!
+
+@@if select == 3
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@exp 500
+
+@mes player
+I feel buffed up!
+
+@@if select == 4
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@exp 1000
+
+@mes player
+I'm burning up!
+
+@@if select == 5
+@talkmode OFF
+@wait 3
+
+@flash
+@wait 1
+@exp 2500
+
+@mes player
+All shall tremble before me!
+
+@@ifend
